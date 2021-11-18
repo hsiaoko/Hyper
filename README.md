@@ -48,11 +48,11 @@ if your enviroment is not SLURM.
 //Step 1: read csv
 CUER::CSVLoader *csv_l = new CUER::CSVLoader("$SRC_DIR/dataset/msd_cleared_utf_8_mini.csv");
 std::vector<string> *head = new std::vector<string>;
-    head->push_back("1");
-    head->push_back("2");
-    head->push_back("3");
-    head->push_back("4");
-    head->push_back("5");
+    head->push_back("atom1");
+    head->push_back("atom2");
+    head->push_back("atom3");
+    head->push_back("atom4");
+    head->push_back("atom5");
     csv_l->read2(false, ',', head);
 
 //Step 2: blocking (plaste your Blocking code to CUER::CSVLoader::blocking()->std::vector<std::vector<std::vector<std::string> *> *> partitions)
