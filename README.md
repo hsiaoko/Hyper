@@ -1,6 +1,7 @@
 # Overview
 
 Hyper is a CPU-GPU parallel System for Entity Resolution which is an implementation of the paper "Parallelizing Sequential Entity Resolution with a Multicore Machine". It implements an implicitly parallel programming model, where the programmer only need to provide a matching rule and three sequential algorithms (i.e. Embeding, Blocking, Match). Hyper is designed so that the programmer does not have to deal with low-level parallel CUDA programming constructs such as threads, locks, barriers, condition variables, etc.
+This repository is only a prototype code; the product-quality code will coming soon. 
 
 Hyper is released under the MIT license.
 
