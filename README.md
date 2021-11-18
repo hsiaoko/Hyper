@@ -1,7 +1,5 @@
-# Hyper
-Hyper: A Hybrid CPU-GPU Parallel System for Entity Resolution
-
 # Overview
+
 Hyper is a CPU-GPU parallel System for Entity Resolution which is an implementation of the paper "Parallelizing Sequential Entity Resolution with a Multicore Machine". It implements an implicitly parallel programming model, where the programmer only need to provide a matching rule and three sequential algorithms (i.e. Embeding, Blocking, Match). Hyper is designed so that the programmer does not have to deal with low-level parallel CUDA programming constructs such as threads, locks, barriers, condition variables, etc.
 
 Hyper is released under the MIT license.
@@ -15,10 +13,11 @@ At the minimum, Hyper depends on the following software:
   + A modern C++ compiler compliant with the C++-17 standard (gcc >= 7, Intel >= 19.0.1)
   + CUDA (>=11.0)
   + cuDNN: v8.2.0
-  + CMake (>= 3.13)
+  + CMake (>= 3.2)
 
 
-# Compiling Hyper
+# Compiling Hyper & Running Hyper
+##Compiling Hyper
 We use CMake to streamline building, testing and installing Hyper. In the following, we will highlight some common commands.
 Let's assume that SRC_DIR is the directory where the source code for Galois resides, and you wish to build Galois in some BUILD_DIR. Run the following commands to set up a build directory:
 
@@ -30,7 +29,7 @@ BUILD_DIR=<path-to-your-build-dir>
 > make
 ```
 
-#Running Hyper
+##Running Hyper
 If you System is based on SLURM please move submit.sh file to your $BUILD_DIR. And then submit your task by sbatch command,
 e.g.
 ```
@@ -99,7 +98,7 @@ h_rule_threshold[1] = 0.9;
 h_rule_aid[2] = 2;
 h_rule_threshold[2] = 0.9;
 
-//Step 5:
+//Step 5: run Hyper
 CUER::TokenRing *tokenring = new CUER::TokenRing(
     ngpus,
     init_ngpus,
@@ -112,9 +111,9 @@ CUER::TokenRing *tokenring = new CUER::TokenRing(
     attr_start_point,
     max_match);
 
-std::thread t(HostReducer, 3, tokenring); // 3
+std::thread t(HostReducer, 3, tokenring);
 
-tokenring->RunHostProducer(rule_size, h_rule_aid, h_rule_threshold, false);
+tokenring->RunHostProducer(rule_size, h_rule_aid, h_rule_threshold, false); // here we used lev_jaro_ratio as Match function, see include/core.h file to plaste your Match function.
 t.join();
 ```
 
