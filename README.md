@@ -33,7 +33,7 @@ BUILD_DIR=<path-to-your-build-dir>
 If you System is based on SLURM please move submit.sh file to your $BUILD_DIR. And then submit your task by sbatch command,
 e.g.
 ```
-> mv $SRC_DIR/submit.sh
+> mv $SRC_DIR/submit.sh $BUILD_DIR
 > sbatch submit.sh
 ```
 Otherwise,
