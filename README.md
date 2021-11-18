@@ -116,7 +116,8 @@ std::thread t(HostReducer, 3, tokenring);
 tokenring->RunHostProducer(rule_size, h_rule_aid, h_rule_threshold, false); // here we used lev_jaro_ratio as Match function, see include/core.h file to plaste your Match function.
 t.join();
 ```
+More details please see $SRC_DIR/example
 
-#Contact Us
+# Contact Us
 For bugs, please raise an issue on GiHub. Questions and comments are also welcome at the Hyper users mailing list: zhuxk@buaa.edu.cn,  hsiaoko.chu@gmail.com
 Any contributions you make are greatly appreciated!
