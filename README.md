@@ -84,6 +84,7 @@ for (int i = 0; i < tuple_size; i++)
 {
   line_size += attr_len_arr[i];
 }
+
 //Step 4: Set matching rule (here Match(t.atom1 s.atom1) and Match(t.atom2 s.atom2) and t.atom4 s.atom4 -> t.id = s.id)
 size_t *h_rule_aid;
 float *h_rule_threshold;
