@@ -17,7 +17,7 @@ At the minimum, Hyper depends on the following software:
 
 
 # Compiling Hyper & Running Hyper
-##Compiling Hyper
+## Compiling Hyper
 We use CMake to streamline building, testing and installing Hyper. In the following, we will highlight some common commands.
 Let's assume that SRC_DIR is the directory where the source code for Galois resides, and you wish to build Galois in some BUILD_DIR. Run the following commands to set up a build directory:
 
@@ -29,7 +29,7 @@ BUILD_DIR=<path-to-your-build-dir>
 > make
 ```
 
-##Running Hyper
+## Running Hyper
 If you System is based on SLURM please move submit.sh file to your $BUILD_DIR. And then submit your task by sbatch command,
 e.g.
 ```
