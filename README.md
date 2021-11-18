@@ -120,5 +120,6 @@ t.join();
 More details please see $SRC_DIR/example
 
 # Contact Us
-For bugs, please raise an issue on GiHub. Questions and comments are also welcome at the Hyper users mailing list: zhuxk@buaa.edu.cn,  hsiaoko.chu@gmail.com
+For bugs, please raise an issue on GiHub. Questions and comments are also welcome at the Hyper users 
++ mailing list: zhuxk@buaa.edu.cn,  hsiaoko.chu@gmail.com
 Any contributions you make are greatly appreciated!
