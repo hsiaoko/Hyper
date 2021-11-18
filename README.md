@@ -2,14 +2,13 @@
 
 Hyper is a CPU-GPU parallel System for Entity Resolution which is an implementation of the paper "Parallelizing Sequential Entity Resolution with a Multicore Machine". It implements an implicitly parallel programming model, where the programmer only need to provide a matching rule and three sequential algorithms (i.e. Embeding, Blocking, Match). Hyper is designed so that the programmer does not have to deal with low-level parallel CUDA programming constructs such as threads, locks, barriers, condition variables, etc.
 This repository is only a prototype code; the product-quality code will coming soon. 
-
 Hyper is released under the MIT license.
 
-#Building Hyper
+# Building Hyper
 You can checkout the latest release by typing (in a terminal):
 git clone https://github.com/hsiaoko/HypER
 
-#Dependencies
+# Dependencies
 At the minimum, Hyper depends on the following software:
   + A modern C++ compiler compliant with the C++-17 standard (gcc >= 7, Intel >= 19.0.1)
   + CUDA (>=11.0)
@@ -120,5 +119,4 @@ t.join();
 
 #Contact Us
 For bugs, please raise an issue on GiHub. Questions and comments are also welcome at the Hyper users mailing list: zhuxk@buaa.edu.cn,  hsiaoko.chu@gmail.com
-
 Any contributions you make are greatly appreciated!
